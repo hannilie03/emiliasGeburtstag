@@ -1,0 +1,22 @@
+# WebStorm/IntelliJ IDEA spezifisch
+/.idea/
+/shelf/
+/.idea/workspace.xml
+/httpRequests/
+/dataSources/
+/dataSources.local.xml
+
+# Node.js / npm
+/node_modules/
+/package-lock.json
+
+# Betriebssystem-Spezifisches
+.DS_Store         # macOS
+Thumbs.db         # Windows
+
+# Logs und temporäre Dateien
+npm-debug.log*
+*.log
+
+# Optional: VSCode oder andere Editoren
+.vscode/
