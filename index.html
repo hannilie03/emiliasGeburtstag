@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8" />
     <title>Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1>Alles Gute zum Geburtstag, Lisa! 🥳</h1>
-<button onclick="zeigeText()">Klick mich 🎁</button>
-<p id="textfeld"></p>
+<div class="centered-content">
+    <div class="krone-container">
+        <!-- Buttergelbe Krone als SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" width="80" height="80" aria-label="Krone">
+            <path
+                    d="M4 52 L12 16 L20 40 L28 16 L36 40 L44 16 L52 40 L60 16 L60 52 Z"
+                    fill="#FFEB7F"
+                    stroke="#F0C419"
+                    stroke-width="3"
+                    stroke-linejoin="round" />
+        </svg>
+    </div>
+
+    <h1>Weil das P in Pink für Prinzessinnen steht!</h1>
+    <button class="pink-button" onclick="location.href='level.html'">
+        Pinker Button für Pinke Prinzessinnen
+    </button>
+    <p id="textfeld"></p>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>

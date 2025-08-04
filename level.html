@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mochi-Seite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<button class="back-btn" onclick="location.href='index.html'">← Zurück</button>
+
+<div class="container">
+    <div class="circle" onclick="zeigeKarte()">try me!</div>
+    <div class="circle" onclick="alert('Button 2 wurde geklickt!')">(*^‿^*)</div>
+    <div class="circle" onclick="alert('Button 3 wurde geklickt!')">(｡♥‿♥｡)</div>
+    <div class="circle" onclick="alert('Button 4 wurde geklickt!')">(づ｡◕‿‿◕｡)づ</div>
+    <div class="circle" onclick="alert('Button 5 wurde geklickt!')">（＾・ω・＾）</div>
+    <div class="circle" onclick="alert('Button 6 wurde geklickt!')">(✿◠‿◠)</div>
+</div>
+
+<!-- Popup-Fenster für Geburtstagskarte -->
+<div id="karteOverlay" class="overlay hidden">
+    <div class="karte">
+        <button class="close-btn" onclick="schliesseKarte()">×</button>
+        <h2>HAPPY BIRTHDAY EMILIA!</h2>
+        <p class="karten-text">
+            Ich dachte weil wir so coole Informatikerinnen sind programmiere ich dir etwas.<br />
+            Klick dich einfach durch die Mochis durch und finde raus was sich dahinter verbigt!
+        </p>
+    </div>
+</div>
+
+<script>
+    function zeigeKarte() {
+        document.getElementById("karteOverlay").classList.remove("hidden");
+    }
+
+    function schliesseKarte() {
+        document.getElementById("karteOverlay").classList.add("hidden");
+    }
+</script>
+</body>
+</html>
+

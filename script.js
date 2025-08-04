@@ -1,3 +1,7 @@
-function zeigeText() {
-    document.getElementById("textfeld").innerText = "🎉 Ich wünsche dir einen ganz tollen Tag! 🎂";
+function zeigeKarte() {
+    document.getElementById("karteOverlay").classList.remove("hidden");
+}
+
+function schliesseKarte() {
+    document.getElementById("karteOverlay").classList.add("hidden");
 }
