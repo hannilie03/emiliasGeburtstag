@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8" />
-    <title>Mochi-Seite</title>
+    <title>I love you so Mochi!</title>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,14 +11,14 @@
 
 <div class="container">
     <div class="circle" onclick="zeigeKarte()">try me!</div>
-    <div class="circle" onclick="alert('Button 2 wurde geklickt!')">(*^‿^*)</div>
-    <div class="circle" onclick="alert('Button 3 wurde geklickt!')">(｡♥‿♥｡)</div>
-    <div class="circle" onclick="alert('Button 4 wurde geklickt!')">(づ｡◕‿‿◕｡)づ</div>
-    <div class="circle" onclick="alert('Button 5 wurde geklickt!')">（＾・ω・＾）</div>
-    <div class="circle" onclick="alert('Button 6 wurde geklickt!')">(✿◠‿◠)</div>
+    <div class="circle" onclick="zeigeKarte2()">(*^‿^*)</div>
+    <div class="circle" onclick="zeigeTraurig()">(｡♥‿♥｡)</div>
+    <div class="circle" onclick="zeigeSlideshow()">(づ｡◕‿‿◕｡)づ</div>
+    <div class="circle" onclick="zeigeRegen()">（＾・ω・＾）</div>
+    <div class="circle" onclick="zeigeKarte6()">(✿◠‿◠)</div>
 </div>
 
-<!-- Popup-Fenster für Geburtstagskarte -->
+<!-- Popup-Fenster für Geburtstagskarte Mochi 1 -->
 <div id="karteOverlay" class="overlay hidden">
     <div class="karte">
         <button class="close-btn" onclick="schliesseKarte()">×</button>
@@ -30,6 +30,110 @@
     </div>
 </div>
 
+<!-- Popup-Fenster für Mochi 2 -->
+<div id="karteOverlay2" class="overlay hidden">
+    <div class="karte">
+        <button class="close-btn" onclick="schliesseKarte2()">×</button>
+        <h2>Coding Connection</h2>
+        <p class="karten-text">
+            Unser Anfang liegt im Code...<br />
+            Dank der Coding Couch haben wir uns und vor allem alle <br />
+            anderen viel besser kennen gelernt. Was würden wir ohne unseren <br />
+            Lieblingsmitbewohner Max machen?? <br />
+            Seit dem ist nicht nur unser Skillset gewachsen sondern auch <br />
+            unsere Freundschaft!🩷
+        </p>
+    </div>
+</div>
+
+<!-- Trauriges Popup-Fenster für Mochi 3 (Coding Couch) -->
+<div id="traurigOverlay" class="overlay hidden traurig">
+    <div class="karte">
+        <button class="close-btn" onclick="schliesseTraurig()">×</button>
+        <h2>Große Verluste...</h2>
+        <p class="karten-text">
+            Leider mussten wir uns auch dieses Jahr mal wieder<br />
+            Von einer geliebten Tasse verabschieden... <br />
+            RIP "Halt einfach die Fresse" 😪🪦 <br /> <br />
+            Du darfst jetzt Paket 2 aufmachen *yay*!
+        </p>
+        <!-- Hier kannst du später ein <img src="deinbild.jpg" alt="..." /> einfügen -->
+    </div>
+</div>
+<audio id="cryingSound" src="crying.mp3" loop></audio>
+
+<!-- Slideshow-Overlay für Mochi 4 -->
+<div id="slideshowOverlay" class="overlay hidden">
+    <div class="karte">
+        <button class="close-btn" onclick="schliesseSlideshow()">×</button>
+        <h2 class="slideshow-title">Fotos für Freunde</h2>
+        <img id="slideshowImage" src="bilder/mochi1.jpg" alt="Slideshow Bild" class="slideshow-image" />
+        <p id="caption" class="caption-text">Wasen 2025 (Frühlingsfest)🍻🥨</p>
+        <div class="slideshow-controls">
+            <button onclick="vorherigesBild()">←</button>
+            <button onclick="naechstesBild()">→</button>
+        </div>
+    </div>
+</div>
+
+<!-- Popup-Fenster für Regen-Karte (Mochi 5) -->
+<div id="regenOverlay" class="overlay regen hidden">
+    <div class="karte">
+        <button class="close-btn" onclick="schliesseRegen()">×</button>
+        <h2>Regen Appreciation</h2>
+        <p class="karten-text">
+            Uns verbindet nicht nur ein sau lustiger Humor, <br />
+            tolle Freunde und eine Liebe zu Mochi sondern auch <br />
+            unsere Ausflüge in den Regen. <br />
+            Ich muss einfach jedes mal an dich denken wenn es regnet! 🌧️
+        </p>
+        <div class="regen-animation"></div>
+    </div>
+</div>
+<audio id="regenSound" src="rain-sound.mp3" loop></audio>
+
+
+<!-- Overlay für Mochi 6 -->
+<div id="karteOverlay6" class="overlay hidden">
+    <div class="karte karte-gross">
+        <button class="close-btn" onclick="schliesseKarte6()">×</button>
+        <h2>Geburtstagskarte</h2>
+        <p class="karten-text">
+            So, du bist am letzten Mochi angekommen, es wird Zeit für
+            eine ordentliche Karte. <br />
+            Erstmal wünsche ich dir natürlich nochmal *Alles Gute zum Geburtstag!* <br />
+            Ich kann gar nicht glauben, dass wir erst seit über einem Jahr so gut befreundet sind,
+            es kommt mir vor wie ein ganzes Leben. In dem Jahr ist auch super viel passiert, vielleicht liegt es
+            ja daran. Ein paar Momente habe ich hier in den Mochis mit aufgenommen aber man kann es gar nicht
+            ganz in Worte fassen. Unser kompletter Alltag ist connected und dabei erleben wir echt alles
+            zusammen. Du warst mir in so vielen Momenten eine unglaublich gute Stütze, meine Comfort Person
+            und bist die Erste zu der ich auf den Teppich renne sobald irgendwas passiert ist.
+            Ich hoffe, dass ich das auch immer für dich sein kann (auch wenn ich keinen Teppich habe). <br />
+            Aber es gibt ja nicht nur Drama, wir haben auch viele gemeinsame Erinnerungen schaffen können.
+            In diesem Lebensjahr durfte ich dich zum Beispiel mit Hamsterbacken erleben,
+            als Powerfrau im Softeisstand und als noch krassere Powerfrau bei BeSys.
+            Zusammen haben wir 1 Jahr
+            Wir haben Smartie Partie gemacht, Düsseldorf erkundet und du warst das 1.Mal
+            auf dem Frühlingsfest in Stuttgart.
+            Ich muss dir meine Hometown aber mal noch besser zeigen, da gibt es mehr als Wasen...
+            hoffentlich schaffen wir das in diesem neuen Lebensjahr.
+            Außerdem wurde natürlich die Gang-Gäng mit unseren unglaublich coolen Stühlen gegründet.
+            Ich hoffe es läuft genauso spektakulär und cool weiter wie bisher, auch wenn sich manche
+            Sachen ändern (du gehst jetzt Praxisstunden anschaffen). <br />
+            Du bist die coolste, süßeste (ja genau, nicht immer so tough tun), reflektierteste,
+            lustigste und aufmerksamste Freundin die ich mir vorstellen kann. Bleib so wie du bist und
+            ich erlöse dich jetzt mal von dem emotionalen Gelaber hier.<br />
+            Hdgdl,
+            deine Hanna 🩷<br /><br />
+
+            PS: Bitte kauf dir einen 2. Bildschirm das ist doch krank!
+
+        </p>
+    </div>
+</div>
+
+
+
 <script>
     function zeigeKarte() {
         document.getElementById("karteOverlay").classList.remove("hidden");
@@ -37,6 +141,128 @@
 
     function schliesseKarte() {
         document.getElementById("karteOverlay").classList.add("hidden");
+    }
+
+    function zeigeKarte2() {
+        document.getElementById("karteOverlay2").classList.remove("hidden");
+    }
+
+    function schliesseKarte2() {
+        document.getElementById("karteOverlay2").classList.add("hidden");
+    }
+
+    function zeigeTraurig() {
+        const overlay = document.getElementById("traurigOverlay");
+        overlay.classList.remove("hidden");
+
+        // Audio starten
+        const audio = document.getElementById("cryingSound");
+        audio.currentTime = 0;
+        audio.play();
+    }
+
+    function schliesseTraurig() {
+        const overlay = document.getElementById("traurigOverlay");
+        overlay.classList.add("hidden");
+
+        // Audio stoppen
+        const audio = document.getElementById("cryingSound");
+        audio.pause();
+        audio.currentTime = 0;
+    }
+
+
+    let regenInterval;
+
+    function zeigeRegen() {
+        const overlay = document.getElementById("regenOverlay");
+        overlay.classList.remove("hidden");
+
+        // Regen-Sound starten
+        const sound = document.getElementById("regenSound");
+        sound.play();
+
+        const regenBox = overlay.querySelector(".regen-animation");
+        regenBox.innerHTML = "";
+
+        regenInterval = setInterval(() => {
+            let drop = document.createElement("div");
+            drop.classList.add("tropfen");
+            drop.style.left = Math.random() * 100 + "vw";
+            drop.style.animationDuration = (1 + Math.random() * 1.5) + "s";
+            regenBox.appendChild(drop);
+            setTimeout(() => drop.remove(), 2500);
+        }, 100);
+    }
+
+    function schliesseRegen() {
+        document.getElementById("regenOverlay").classList.add("hidden");
+        clearInterval(regenInterval);
+
+        // Regen-Sound stoppen
+        const sound = document.getElementById("regenSound");
+        sound.pause();
+        sound.currentTime = 0;
+    }
+
+
+    function zeigeKarte6() {
+        document.getElementById("karteOverlay6").classList.remove("hidden");
+    }
+
+    function schliesseKarte6() {
+        document.getElementById("karteOverlay6").classList.add("hidden");
+    }
+
+    let bilder = [
+        "bilder/bild9.jpg",
+        "bilder/bild2.jpg",
+        "bilder/bild3.jpg",
+        "bilder/bild4.jpg",
+        "bilder/bild5.jpg",
+        "bilder/bild6.jpg",
+        "bilder/bild7.jpg",
+        "bilder/bild8.jpg",
+        "bilder/bild1.jpg"
+    ];
+
+    let captions = [
+        "Wasen 2025 (Frühlingsfest)🍻🥨",
+        "PARTY IN BILLSTEDT 🦭" ,
+        "DDORF >>> köln",
+        "Warum Partnerlook mit Armin?!?!🧑‍🤝‍🧑",
+        "Hätte Angst vor dir auf der Piste so badass😎",
+        "Gangyoga (war auch dein einziges mal)🧘‍♀️",
+        "Reichenau im Smart for 3",
+        "rawr 🦖",
+        "Krisenzeiten"
+    ];
+
+    let aktuellesBild = 0;
+
+    function zeigeSlideshow() {
+        aktuellesBild = 0;
+        zeigeBild(aktuellesBild);
+        document.getElementById("slideshowOverlay").classList.remove("hidden");
+    }
+
+    function schliesseSlideshow() {
+        document.getElementById("slideshowOverlay").classList.add("hidden");
+    }
+
+    function zeigeBild(index) {
+        document.getElementById("slideshowImage").src = bilder[index];
+        document.getElementById("caption").textContent = captions[index];
+    }
+
+    function vorherigesBild() {
+        aktuellesBild = (aktuellesBild - 1 + bilder.length) % bilder.length;
+        zeigeBild(aktuellesBild);
+    }
+
+    function naechstesBild() {
+        aktuellesBild = (aktuellesBild + 1) % bilder.length;
+        zeigeBild(aktuellesBild);
     }
 </script>
 </body>

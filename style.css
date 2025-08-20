@@ -188,3 +188,167 @@ body {
     display: none;
 }
 
+/* Popup-Fenster Overlay (gemeinsam) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 192, 203, 0.8); /* rosa semi-transparent für Karte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* extra für traurige Variante */
+.overlay.traurig {
+    background-color: rgba(80, 80, 80, 0.9); /* dunkles, trübes Grau */
+}
+
+.hidden {
+    display: none;
+}
+
+.karte {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    max-height: 80vh;       /* Karte wird jetzt bis zu 80% der Bildschirmhöhe */
+    overflow-y: auto;       /* Scrollen, falls Text zu lang */
+    text-align: center;
+    position: relative;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.karten-text {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* Slideshow spezifisch */
+.karte.slideshow {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 600px;
+    text-align: center;
+}
+
+.slideshow-title {
+    font-size: 1.6rem;
+    color: #d6336c;
+    text-align: center;
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+.slideshow-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: block;
+    margin: 0 auto;
+}
+
+.caption-text {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    user-select: none;
+}
+
+.slideshow-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.slideshow-controls button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(255, 105, 180, 0.4);
+    transition: transform 0.2s ease;
+}
+
+.slideshow-controls button:hover {
+    transform: scale(1.1);
+}
+
+/* Regen-Overlay blau-grau */
+.overlay.regen {
+    background: linear-gradient(135deg, rgba(30,30,50,0.95), rgba(80,100,120,0.95));
+    overflow: hidden;
+}
+
+/* Container für die Tropfen */
+.regen-animation {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Tropfen selbst */
+.tropfen {
+    position: absolute;
+    top: -20px;
+    width: 4px;         /* breiter */
+    height: 23px;       /* länger */
+    background: rgba(200, 220, 255, 0.7);
+    border-radius: 50%;
+    animation: fallen linear infinite;
+}
+
+/* Animation: Tropfen fallen */
+@keyframes fallen {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+.karte-gross {
+    width: 80%;      /* größer als normale Karte */
+    max-width: 900px;
+    min-height: 400px;
+}
+
+
+
